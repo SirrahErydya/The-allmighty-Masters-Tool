@@ -29,56 +29,56 @@ abstract class ExperienceLevel
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getLevel() {
         return $this->level;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getAp() {
         return $this->ap;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getAttributeValue() {
         return $this->attribute_value;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getSkillValue() {
         return $this->skill_value;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getFightskillValue() {
         return $this->fightskill_value;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getAttributePoints() {
         return $this->attribute_points;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getSpells() {
         return $this->spells;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getForeignSpells() {
         return $this->foreign_spells;

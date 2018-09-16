@@ -8,7 +8,7 @@
 
 abstract class Species {
 
-    private $ap_costs;
+    private $apCosts;
     private $life;
     private $soul_energy;
     private $toughness;
@@ -31,35 +31,42 @@ abstract class Species {
     }
 
     /**
-     * @return mixed
+     * Set the species-dependent perks and mals
+     * Implemented in sub classes
+     * @param hero The hero assigned to the species
+     */
+    public abstract function setSpeciesAttributes($hero);
+
+    /**
+     * @return int
      */
     public function getApCosts() {
-        return $this->ap_costs;
+        return $this->apCosts;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getLife() {
         return $this->life;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getSoulEnergy() {
         return $this->soul_energy;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getToughness() {
         return $this->toughness;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getSpeed() {
         return $this->speed;

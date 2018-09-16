@@ -8,25 +8,44 @@
 
 abstract class Culture
 {
-    private $ap_value;
+    private $apCosts;
+    private $species;
     private $skills;
-    private $language;
 
-    function __construct($ap_value, $skills, $language) {
-        $this->ap_value = $ap_value;
+    function __construct($apCosts, $skills, $species) {
+        $this->apCosts = $apCosts;
         $this->skills = $skills;
-        $this->language = $language;
+        $this->species = $species;
     }
 
-    public function __get($name) {
-        switch ($name) {
-            case 'ap_value':
-                return $this->ap_value;
-            case 'skills':
-                return $this->skills;
-            case 'language':
-                return $this->language;
-        }
+    /**
+     * Sets the different skills and specia_valuel abilities that belong to this culture
+     * Overwritten in subclass
+     * @param hero The hero belonging to this culture
+     */
+    public abstract function setCulturePerks(Hero $hero);
+
+    /**
+     * @return int
+     */
+    public function getApCosts() {
+        return $this->apCosts;
     }
+
+    /**
+     * @return Species
+     */
+    public function getSpecies() {
+        return $this->species;
+    }
+
+    /**
+     * @return array
+     */
+    public function getSkills() {
+        return $this->skills;
+    }
+
+
 
 }
